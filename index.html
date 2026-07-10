@@ -156,6 +156,27 @@
   .pill[aria-pressed="true"]{
     background:var(--accent-bg); border-color:var(--accent); color:var(--accent-ink); font-weight:500;
   }
+  .likert{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:6px; padding:10px 2px 4px;
+  }
+  .likert-dot{
+    --dot-size:44px;
+    width:var(--dot-size); height:var(--dot-size);
+    padding:0; margin:0; border-radius:50%;
+    border:2.5px solid var(--line);
+    background:var(--paper);
+    font-size:0; color:transparent; line-height:0;
+    flex-shrink:0;
+  }
+  .likert-dot.size-1{ --dot-size:60px; }
+  .likert-dot.size-2{ --dot-size:48px; }
+  .likert-dot.size-3{ --dot-size:34px; }
+  .likert-dot.pole-a{ border-color:var(--accent); }
+  .likert-dot.pole-b{ border-color:var(--ink-soft); }
+  .likert-dot[aria-pressed="true"]{ background:var(--ink-faint); border-color:var(--ink-faint); }
+  .likert-dot.pole-a[aria-pressed="true"]{ background:var(--accent); border-color:var(--accent); }
+  .likert-dot.pole-b[aria-pressed="true"]{ background:var(--ink-soft); border-color:var(--ink-soft); }
 
   input[type="range"]{
     width:100%; accent-color:var(--accent); margin-top:8px;
@@ -219,13 +240,18 @@
       <circle cx="460" cy="120" r="5" fill="#0B6E5B"/>
       <circle cx="90" cy="96" r="14" fill="#16221F"/>
       <rect x="75" y="112" width="30" height="30" rx="8" fill="#16221F"/>
-      <g transform="translate(410,88)">
-        <rect x="0" y="0" width="52" height="40" rx="4" fill="#0B6E5B"/>
-        <rect x="6" y="8" width="8" height="24" fill="#E3EFEC"/>
-        <rect x="22" y="8" width="8" height="24" fill="#E3EFEC"/>
-        <rect x="38" y="8" width="8" height="24" fill="#E3EFEC"/>
+      <g transform="translate(400,78)">
+        <polygon points="35,0 70,22 0,22" fill="#0B6E5B"/>
+        <rect x="4" y="26" width="7" height="28" fill="#0B6E5B"/>
+        <rect x="18" y="26" width="7" height="28" fill="#0B6E5B"/>
+        <rect x="32" y="26" width="7" height="28" fill="#0B6E5B"/>
+        <rect x="46" y="26" width="7" height="28" fill="#0B6E5B"/>
+        <rect x="60" y="26" width="7" height="28" fill="#0B6E5B"/>
+        <rect x="-4" y="56" width="78" height="7" rx="1" fill="#0B6E5B"/>
       </g>
     </svg>
+
+    <p style="font-size:12px; color:var(--ink-faint); text-align:center; margin-top:-28px;">시민과 iM뱅크를 잇는 다리</p>
 
     <button class="btn" id="start-btn">설문 시작하기 <span aria-hidden="true">→</span></button>
 
@@ -359,22 +385,30 @@
           <input type="text" class="other-input" data-for="a_motivation" placeholder="직접 입력" hidden>
         </div>
         <div class="qblock">
-          <label class="qlabel">iM뱅크 브랜드의 첫인상은?</label>
-          <div class="pillrow" data-q="a_image">
+          <label class="qlabel">iM뱅크 브랜드의 첫인상은? (복수응답 가능)</label>
+          <div class="pillrow" data-q="a_image" data-multi="true">
             <button type="button" class="pill">친근한 지역 은행</button>
             <button type="button" class="pill">오래되고 보수적</button>
             <button type="button" class="pill">디지털 경쟁력 약함</button>
             <button type="button" class="pill">지역사회와 함께함</button>
             <button type="button" class="pill">특별한 인상 없음</button>
+            <button type="button" class="pill" data-other>기타</button>
           </div>
+          <input type="text" class="other-input" data-for="a_image" placeholder="직접 입력" hidden>
         </div>
         <div class="qblock">
           <label class="qlabel">타 은행이 더 좋은 조건을 제안하면 갈아탈 의향이 있나요?</label>
-          <input type="range" class="rng" data-q="a_switch" min="1" max="5" value="3" step="1">
+          <div class="pillrow likert" data-q="a_switch">
+            <button type="button" class="pill likert-dot size-1 pole-a">1</button>
+            <button type="button" class="pill likert-dot size-2 pole-a">2</button>
+            <button type="button" class="pill likert-dot size-3">3</button>
+            <button type="button" class="pill likert-dot size-2 pole-b">4</button>
+            <button type="button" class="pill likert-dot size-1 pole-b">5</button>
+          </div>
           <div class="rng-labels"><span>바로 갈아탄다</span><span>절대 안 옮긴다</span></div>
         </div>
         <div class="qblock">
-          <label class="qlabel">iM뱅크가 지역사회 · 소상공인 · 청년에 기여한다고 느낀 적이 있나요?</label>
+          <label class="qlabel">iM뱅크가 지역사회 · 소상공인 · 청년에 기여한다고 느낀 적이 있나요? (복수응답 가능)</label>
           <div class="pillrow" data-q="a_esg" data-multi="true">
             <button type="button" class="pill">소상공인 지원 체감</button>
             <button type="button" class="pill">청년 프로그램 체감</button>
@@ -455,7 +489,13 @@
         <h2>지역성에 대한 인식</h2>
         <div class="qblock">
           <label class="qlabel">iM뱅크는 나에게 어떤 은행에 더 가깝게 느껴지나요?</label>
-          <input type="range" class="rng" data-q="locality" min="1" max="5" value="3" step="1">
+          <div class="pillrow likert" data-q="locality">
+            <button type="button" class="pill likert-dot size-1 pole-a">1</button>
+            <button type="button" class="pill likert-dot size-2 pole-a">2</button>
+            <button type="button" class="pill likert-dot size-3">3</button>
+            <button type="button" class="pill likert-dot size-2 pole-b">4</button>
+            <button type="button" class="pill likert-dot size-1 pole-b">5</button>
+          </div>
           <div class="rng-labels"><span>친근하고 상생하는 은행</span><span>로컬에 갇힌 은행</span></div>
         </div>
       </div>
