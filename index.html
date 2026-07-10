@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>iM뱅크 이용 행태 설문 · iM브릿지</title>
-<meta name="description" content="iM뱅크 이용 행태 및 브랜드 인식 설문. 지속가능한 상생 금융 서비스를 만들기 위한 초기 조사, iM:Possible Challenger 4th AI Finance Hackathon.">
+<meta name="description" content="iM뱅크 이용 행태 및 브랜드 인식 설문. 지속가능한 상생 금융 서비스를 만들기 위한 초기 조사, iM:Possible Challenger '지속가능한 부다'팀.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -166,6 +166,12 @@
     width:100%; margin-top:10px; height:40px; border-radius:8px;
     border:1.5px solid var(--line); padding:0 14px; font-size:14px; background:var(--paper);
   }
+  .ta{
+    width:100%; min-height:88px; margin-top:10px; border-radius:10px;
+    border:1.5px solid var(--line); padding:12px 14px; font-size:14px;
+    background:var(--paper); font-family:'IBM Plex Sans KR', sans-serif; resize:vertical;
+  }
+  .ta:focus, .other-input:focus{ outline:none; border-color:var(--accent); }
 
   .nav-row{ display:flex; gap:10px; margin-top:36px; }
   .nav-row .btn{ flex:1; }
@@ -202,9 +208,9 @@
 <!-- ============ LANDING ============ -->
 <main id="view-landing" class="view active">
   <section class="hero">
-    <span class="eyebrow">iM:Possible Challenger 4th AI Finance Hackathon · 현장 조사</span>
+    <span class="eyebrow">iM:Possible Challenger · 지속가능한 부다팀 · 전국 현장 조사</span>
     <h1>iM뱅크는 <em>당신에게</em> 어떤 은행인가요?</h1>
-    <p class="lede">대형 시중은행도, 인터넷은행도 아닌 지역은행 iM뱅크. 지속가능한 상생 금융 서비스를 만들기 위한 초기 조사로, 여러분의 짧은 답변이 첫 데이터가 됩니다.</p>
+    <p class="lede">대구·경북을 넘어 시중은행이 된 iM뱅크. 지속가능한 상생 금융 서비스를 만들기 위한 초기 조사로, 여러분의 짧은 답변이 첫 데이터가 됩니다.</p>
 
     <svg class="bridge-svg" viewBox="0 0 520 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="사람과 은행을 잇는 다리 모양 일러스트">
       <line x1="40" y1="120" x2="480" y2="120" stroke="#DEE6E3" stroke-width="2"/>
@@ -233,7 +239,7 @@
   <section class="section">
     <p class="kicker">왜 여쭤보나요</p>
     <h2>지속가능한 상생 금융 서비스를 위한 첫걸음</h2>
-    <p>iM:Possible Challenger 4th AI Finance Hackathon 참가팀이 진행하는 초기 조사예요. 대구·경북 시민들이 iM뱅크를 실제로 어떻게 인식하고, 어떤 지점에서 이탈하거나 머무는지를 파악해 지속가능한 상생 금융 서비스 설계에 반영합니다.</p>
+    <p>iM:Possible Challenger에 참가하는 '지속가능한 부다'팀이 진행하는 초기 조사입니다. 전국 각지 시민들이 iM뱅크를 실제로 어떻게 인식하고, 어떤 지점에서 이탈하거나 머무는지를 파악해 지속가능한 상생 금융 서비스 설계에 반영합니다.</p>
 
     <div class="cat-grid">
       <div class="cat-card">
@@ -260,7 +266,7 @@
   </section>
 
   <footer class="site">
-    <span>iM:Possible Challenger 4th AI Finance Hackathon 참가팀</span>
+    <span>iM:Possible Challenger · 지속가능한 부다팀</span>
     <span>무기명 · 연구 목적 외 사용 안 함</span>
   </footer>
 </main>
@@ -288,9 +294,13 @@
         <div class="qblock">
           <label class="qlabel">거주 지역</label>
           <div class="pillrow" data-q="region">
-            <button type="button" class="pill">대구 · 경북</button>
             <button type="button" class="pill">수도권</button>
-            <button type="button" class="pill">기타 지방</button>
+            <button type="button" class="pill">충청권</button>
+            <button type="button" class="pill">전라권</button>
+            <button type="button" class="pill">대구·경북권</button>
+            <button type="button" class="pill">부산·울산·경남권</button>
+            <button type="button" class="pill">강원권</button>
+            <button type="button" class="pill">제주권</button>
           </div>
         </div>
       </div>
@@ -316,6 +326,7 @@
             <button type="button" class="pill">지점 · ATM 접근성</button>
             <button type="button" class="pill">앱 편의성</button>
             <button type="button" class="pill">주변 권유</button>
+            <button type="button" class="pill">직장 · 학교 등 상황적 이유</button>
           </div>
         </div>
       </div>
@@ -364,7 +375,7 @@
         </div>
         <div class="qblock">
           <label class="qlabel">iM뱅크가 지역사회 · 소상공인 · 청년에 기여한다고 느낀 적이 있나요?</label>
-          <div class="pillrow" data-q="a_esg">
+          <div class="pillrow" data-q="a_esg" data-multi="true">
             <button type="button" class="pill">소상공인 지원 체감</button>
             <button type="button" class="pill">청년 프로그램 체감</button>
             <button type="button" class="pill">사회공헌 인지만 함</button>
@@ -379,12 +390,14 @@
         <div class="qblock">
           <label class="qlabel">주거래로 고려하지 않거나 중단한 이유는?</label>
           <div class="pillrow" data-q="b_reason">
-            <button type="button" class="pill">인지도가 낮아서</button>
+            <button type="button" class="pill">iM뱅크를 잘 모른다</button>
             <button type="button" class="pill">혜택 · 금리 부족</button>
             <button type="button" class="pill">지점 접근성 낮음</button>
             <button type="button" class="pill">앱 경험 아쉬움</button>
             <button type="button" class="pill">특별한 이유 없음</button>
+            <button type="button" class="pill" data-other>기타</button>
           </div>
+          <input type="text" class="other-input" data-for="b_reason" placeholder="직접 입력" hidden>
         </div>
         <div class="qblock">
           <label class="qlabel">타 은행 대비 가장 큰 아쉬움은? (복수 선택)</label>
@@ -393,8 +406,10 @@
             <button type="button" class="pill">앱 · 디지털 경험</button>
             <button type="button" class="pill">지점 · 접근성</button>
             <button type="button" class="pill">금리 · 혜택</button>
-            <button type="button" class="pill">인지도 부족</button>
+            <button type="button" class="pill">iM뱅크를 잘 모른다</button>
+            <button type="button" class="pill" data-other>기타</button>
           </div>
+          <input type="text" class="other-input" data-for="b_gap" placeholder="직접 입력" hidden>
         </div>
         <div class="qblock">
           <label class="qlabel">어떤 모습이면 '맡겨도 되겠다'는 마음이 들까요?</label>
@@ -404,7 +419,9 @@
             <button type="button" class="pill">지역상생 활동 강화</button>
             <button type="button" class="pill">앱 경험 개선</button>
             <button type="button" class="pill">딱히 없음</button>
+            <button type="button" class="pill" data-other>기타</button>
           </div>
+          <input type="text" class="other-input" data-for="b_trigger" placeholder="직접 입력" hidden>
         </div>
       </div>
 
@@ -412,24 +429,24 @@
         <p class="stepno">STEP 5 / 6</p>
         <h2>금융 생활 속 페인포인트</h2>
         <div class="qblock">
-          <label class="qlabel">'은행이 내 상황을 더 이해해줬으면' 싶었던 순간은?</label>
-          <div class="pillrow" data-q="pain">
+          <label class="qlabel">'은행이 내 상황을 더 이해해줬으면' 싶었던 순간은? (복수선택 가능)</label>
+          <div class="pillrow" data-q="pain" data-multi="true">
             <button type="button" class="pill">대출 · 신용 어려움</button>
             <button type="button" class="pill">소비 패턴 이해 부족</button>
             <button type="button" class="pill">저축 목표 설계 부재</button>
             <button type="button" class="pill">비대면 상담 한계</button>
-            <button type="button" class="pill">특별히 없음</button>
           </div>
+          <textarea class="ta" data-q="pain_text" placeholder="구체적인 경험을 자유롭게 적어주세요 (선택)"></textarea>
         </div>
         <div class="qblock">
-          <label class="qlabel">'ESG 디지털 은행'이 된다면 가장 먼저 해결해줬으면 하는 것은?</label>
-          <div class="pillrow" data-q="esg_expect">
+          <label class="qlabel">'ESG 금융 정책'이 시행된다면 가장 먼저 떠오르는 것, 혹은 가장 바라는 내용은? (복수선택 가능)</label>
+          <div class="pillrow" data-q="esg_expect" data-multi="true">
             <button type="button" class="pill">소상공인 정책자금 연결</button>
             <button type="button" class="pill">청년 자산관리 · 교육</button>
             <button type="button" class="pill">지역 일자리 · 창업 지원</button>
             <button type="button" class="pill">금융취약계층 지원</button>
-            <button type="button" class="pill">잘 모르겠음</button>
           </div>
+          <textarea class="ta" data-q="esg_expect_text" placeholder="바라는 점을 자유롭게 적어주세요 (선택)"></textarea>
         </div>
       </div>
 
@@ -513,6 +530,9 @@
     document.querySelectorAll('input[type="range"]').forEach(r => {
       data[r.getAttribute('data-q')] = r.value;
     });
+    document.querySelectorAll('textarea[data-q]').forEach(t => {
+      data[t.getAttribute('data-q')] = t.value.trim();
+    });
     data.branch = order[3] === '3A' ? '이용자' : '비이용자';
     data.timestamp = new Date().toISOString();
     return data;
@@ -544,7 +564,9 @@
   function isAnswered(qEl){
     const qname = qEl.getAttribute('data-q');
     if(qEl.classList.contains('pillrow')){
-      return qEl.querySelector('.pill[aria-pressed="true"]') !== null;
+      if(qEl.querySelector('.pill[aria-pressed="true"]') !== null) return true;
+      const sibling = qEl.parentElement.querySelector('textarea[data-q="'+qname+'_text"]');
+      return !!(sibling && sibling.value.trim());
     }
     return true; // ranges always have a default value
   }
