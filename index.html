@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>iM뱅크 이용 행태 설문 · iM브릿지</title>
-<meta name="description" content="iM뱅크 이용 행태 및 브랜드 인식 설문. 지속가능한 상생 금융 서비스를 만들기 위한 초기 조사, iM:Possible Challenger '지속가능한 부다'팀.">
+<title>공동 금융 생활 수요 조사 · iM브릿지</title>
+<meta name="description" content="공동 금융 생활과 커뮤니티형 결합 서비스의 실제 수요를 파악하기 위한 무기명 설문입니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -194,6 +194,13 @@
   }
   .ta:focus, .other-input:focus{ outline:none; border-color:var(--accent); }
 
+  .text-input{
+    width:100%; height:46px; border-radius:10px;
+    border:1.5px solid var(--line); padding:0 14px; font-size:14px; background:var(--paper);
+  }
+  .text-input:focus{ outline:none; border-color:var(--accent); }
+  .helper{ font-size:12px; color:var(--ink-faint); margin:8px 0 0; }
+
   .nav-row{ display:flex; gap:10px; margin-top:36px; }
   .nav-row .btn{ flex:1; }
 
@@ -230,8 +237,8 @@
 <main id="view-landing" class="view active">
   <section class="hero">
     <span class="eyebrow">iM:Possible Challenger · 지속가능한 부다팀</span>
-    <h1>iM뱅크는 <em>당신에게</em> 어떤 은행인가요?</h1>
-    <p class="lede">대구·경북을 넘어 시중은행이 된 iM뱅크. 지속가능한 상생 금융 서비스를 만들기 위한 초기 조사로, 여러분의 짧은 답변이 첫 데이터가 됩니다.</p>
+    <h1>함께하는 금융, <em>정말 필요할까요?</em></h1>
+    <p class="lede">가족부터 친구, 룸메이트, 커플, 크루까지. 함께 돈을 관리하고 일상을 나누는 새로운 금융 서비스의 실제 수요를 알아봅니다.</p>
 
     <svg class="bridge-svg" viewBox="0 0 520 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="사람과 은행을 잇는 다리 모양 일러스트">
       <line x1="40" y1="120" x2="480" y2="120" stroke="#DEE6E3" stroke-width="2"/>
@@ -256,37 +263,37 @@
     <button class="btn" id="start-btn">설문 시작하기 <span aria-hidden="true">→</span></button>
 
     <div class="meta-row">
-      <div class="meta-item"><span class="mono">1~2분</span> 소요</div>
-      <div class="meta-item"><span class="mono">14문항</span></div>
-      <div class="meta-item"><span class="mono">0개</span> 개인정보 수집</div>
+      <div class="meta-item"><span class="mono">3~5분</span> 소요</div>
+      <div class="meta-item"><span class="mono">13문항</span></div>
+      <div class="meta-item"><span class="mono">무기명</span> 응답</div>
     </div>
   </section>
 
   <section class="section">
     <p class="kicker">왜 여쭤보나요</p>
-    <h2>지속가능한 상생 금융 서비스를 위한 첫걸음</h2>
-    <p>iM:Possible Challenger에 참가하는 '지속가능한 부다'팀이 진행하는 초기 조사입니다. 전국 각지 시민들이 iM뱅크를 실제로 어떻게 인식하고, 어떤 지점에서 이탈하거나 머무는지를 파악해 지속가능한 상생 금융 서비스 설계에 반영합니다.</p>
+    <h2>아이디어보다 먼저, 실제 수요를 확인합니다</h2>
+    <p>iM:Possible Challenger에 참가하는 '지속가능한 부다'팀이 진행하는 초기 조사입니다. 공동 금융 생활의 현재 모습과 불편, 유연한 결합 서비스 및 재미있는 모임통장에 대한 수요를 확인해 서비스 설계에 반영합니다.</p>
 
     <div class="cat-grid">
       <div class="cat-card">
         <div class="num">01</div>
-        <h3>주거래 은행</h3>
-        <p>어떤 기준으로 은행을 고르는지</p>
+        <h3>공동 금융 생활</h3>
+        <p>누구와 어떻게 돈을 관리하는지</p>
       </div>
       <div class="cat-card">
         <div class="num">02</div>
-        <h3>이용 여부</h3>
-        <p>쓰는 이유, 안 쓰는 이유</p>
+        <h3>유연한 결합</h3>
+        <p>금융과 일상을 묶을 수요</p>
       </div>
       <div class="cat-card">
         <div class="num">03</div>
-        <h3>브랜드 인식</h3>
-        <p>iM뱅크의 첫인상</p>
+        <h3>모임통장의 재미</h3>
+        <p>소속감과 소통에 대한 기대</p>
       </div>
       <div class="cat-card">
         <div class="num">04</div>
-        <h3>지역성</h3>
-        <p>친근함일까, 한계일까</p>
+        <h3>응답자 정보</h3>
+        <p>연령과 성별에 따른 수요 차이</p>
       </div>
     </div>
   </section>
@@ -303,203 +310,164 @@
     <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
 
     <form id="survey-form">
-
       <div class="step" data-step="0">
-        <p class="stepno">STEP 1 / 6</p>
-        <h2>기본 정보</h2>
+        <p class="stepno">SECTION 1 / 4</p>
+        <h2>공동 금융 생활 및 결합 행태</h2>
         <div class="qblock">
-          <label class="qlabel">연령대</label>
-          <div class="pillrow" data-q="age">
-            <button type="button" class="pill">10대</button>
-            <button type="button" class="pill">20대</button>
-            <button type="button" class="pill">30대</button>
-            <button type="button" class="pill">40대</button>
-            <button type="button" class="pill">50대 이상</button>
+          <label class="qlabel">1. 평소 가족, 친구, 룸메이트, 동아리, 소모임 등과 함께 금융 생활(자산 공동 관리, 비용 각출, 회비 모으기 등)을 하고 계시나요? (중복 선택 가능)</label>
+          <div class="pillrow" data-q="shared_finance_relationships" data-multi="true">
+            <button type="button" class="pill">실제 가족 / 친척 (부모, 자녀, 배우자, 형제자매 등)</button>
+            <button type="button" class="pill">커플 (데이트 비용 공동 관리)</button>
+            <button type="button" class="pill">룸메이트 / 하우스메이트 (주거비, 공과금 분담)</button>
+            <button type="button" class="pill">친구들과의 정기 모임 (계모임, 여행 등)</button>
+            <button type="button" class="pill">크루 (소모임, 동아리, 커뮤니티 등)</button>
+            <button type="button" class="pill" data-exclusive>현재는 함께 돈을 모으거나 묶여 있는 관계가 없다</button>
+            <button type="button" class="pill" data-other>기타</button>
           </div>
+          <input type="text" class="other-input" data-for="shared_finance_relationships" placeholder="기타 관계를 입력해주세요" hidden>
         </div>
         <div class="qblock">
-          <label class="qlabel">거주 지역</label>
-          <div class="pillrow" data-q="region">
-            <button type="button" class="pill">수도권</button>
-            <button type="button" class="pill">충청권</button>
-            <button type="button" class="pill">호남권</button>
-            <button type="button" class="pill">대구·경북권</button>
-            <button type="button" class="pill">부산·울산·경남권</button>
-            <button type="button" class="pill">강원권</button>
-            <button type="button" class="pill">제주권</button>
+          <label class="qlabel">2. 현재 공동 돈 관리를 위해 주로 사용하는 방법은 무엇인가요?</label>
+          <div class="pillrow" data-q="shared_money_method">
+            <button type="button" class="pill">특정 은행의 모임통장 서비스 (예: 카카오뱅크, 토스뱅크 등)</button>
+            <button type="button" class="pill">총무 한 명의 개인 계좌로 송금</button>
+            <button type="button" class="pill">수기 장부나 엑셀, 노션(Notion) 등으로 기록 관리</button>
+            <button type="button" class="pill">공동 카드 발급</button>
+            <button type="button" class="pill" data-other>기타</button>
           </div>
+          <input type="text" class="other-input" data-for="shared_money_method" placeholder="사용 중인 방법을 입력해주세요" hidden>
+        </div>
+        <div class="qblock">
+          <label class="qlabel">3. 왜 그러한 방법을 사용하시나요?</label>
+          <div class="pillrow" data-q="shared_money_method_reason">
+            <button type="button" class="pill">돈이 오고 가는 내역과 잔액을 실시간으로 모두가 확인할 수 있어서 (투명성)</button>
+            <button type="button" class="pill">매달 나가는 고정비나 회비 정산 과정이 가장 간편해서 (편리성)</button>
+            <button type="button" class="pill">서비스의 화면(UI)이 직관적이고 사용하기 편해서 (사용성)</button>
+            <button type="button" class="pill">우리 모임만의 소속감이나 함께 모으는 재미를 느낄 수 있어서</button>
+            <button type="button" class="pill">돈 얘기 외에도 멤버들과 소소하게 소통하거나 리액션하기 좋아서</button>
+            <button type="button" class="pill">모임원(또는 가족) 중 누군가가 초대해서 자연스럽게 쓰게 되었다 (지인 추천)</button>
+            <button type="button" class="pill">다른 대안을 잘 모르거나, 기존에 쓰던 방식이 익숙하고 무난해서</button>
+            <button type="button" class="pill" data-other>기타</button>
+          </div>
+          <input type="text" class="other-input" data-for="shared_money_method_reason" placeholder="이유를 입력해주세요" hidden>
         </div>
       </div>
 
       <div class="step" data-step="1" hidden>
-        <p class="stepno">STEP 2 / 6</p>
-        <h2>주거래 은행</h2>
+        <p class="stepno">SECTION 2 / 4</p>
+        <h2><span class="mono">iM family</span> 유연한 결합 및 일상 관리</h2>
         <div class="qblock">
-          <label class="qlabel">현재 가장 중심적으로 이용하는 '주거래 은행'은 어디인가요?</label>
-          <div class="pillrow" data-q="main_bank">
-            <button type="button" class="pill">iM뱅크</button>
-            <button type="button" class="pill">국민 · 신한 · 하나 · 우리 · 농협</button>
-            <button type="button" class="pill">카카오뱅크 · 케이뱅크</button>
-            <button type="button" class="pill">토스뱅크</button>
-            <button type="button" class="pill">기타 지방은행</button>
+          <label class="qlabel">1. 가족, 룸메이트, 커플, 친한 친구, 여행 크루 등과 '금융 혜택이나 일정을 결합'하고 싶다고 느낀 적이 있으신가요?</label>
+          <div class="pillrow" data-q="bundle_desire_frequency">
+            <button type="button" class="pill">매우 자주 느낀다</button><button type="button" class="pill">가끔 느낀다</button><button type="button" class="pill">별로 느낀 적 없다</button><button type="button" class="pill">전혀 없다</button>
           </div>
         </div>
         <div class="qblock">
-          <label class="qlabel">그 은행을 주거래로 선택한 결정적인 기준은? (복수 선택)</label>
-          <div class="pillrow" data-q="bank_criteria" data-multi="true">
-            <button type="button" class="pill">오랜 익숙함</button>
-            <button type="button" class="pill">압도적인 금리 · 혜택</button>
-            <button type="button" class="pill">지점 · ATM 접근성</button>
-            <button type="button" class="pill">앱 편의성</button>
-            <button type="button" class="pill">주변 권유</button>
-            <button type="button" class="pill">직장 · 학교 등 상황적 이유</button>
+          <label class="qlabel">2. 만약 가족, 룸메이트, 친구, 커플 등 간의 결합 서비스가 있다면, 가장 필요하다고 생각하는 기능은 무엇인가요? (최대 2개 선택)</label>
+          <div class="pillrow" data-q="desired_bundle_features" data-multi="true" data-max="2">
+            <button type="button" class="pill">통신사 결합 할인처럼, 결합 인원이 많아질수록 우대금리나 수수료 혜택 제공</button>
+            <button type="button" class="pill">집안일 분담, 공과금 납부일, 함께 가는 여행 등 공동 일정 관리(캘린더) 기능</button>
+            <button type="button" class="pill">경조사(결혼, 부고, 생일 등)나 특별한 날을 위한 공동 펀딩 및 정산 기능</button>
+            <button type="button" class="pill">매달 고정적으로 나가는 생활비(월세, 관리비 등) 자동 이체 및 현황 공유</button>
+            <button type="button" class="pill">서류 증빙 없이 카카오톡 등으로 링크만 공유하면 즉시 그룹 결합 및 해제 가능</button>
+            <button type="button" class="pill">부모님 용돈 드리기 자동화</button>
+            <button type="button" class="pill">온 가족 자산 현황판</button>
+            <button type="button" class="pill">룸메이트 정산 알림</button>
+            <button type="button" class="pill" data-other>기타</button>
           </div>
+          <p class="helper">가장 필요한 기능을 2개까지 골라주세요.</p>
+          <input type="text" class="other-input" data-for="desired_bundle_features" placeholder="필요한 기능을 입력해주세요" hidden>
+        </div>
+        <div class="qblock">
+          <label class="qlabel">3. 기존 은행의 '가족 결합 서비스'를 이용하거나 신청할 때, 가장 불편했거나 아쉬웠던 점은 무엇인가요? (가족 결합 경험자 또는 희망자 기준 / 중복 선택 가능)</label>
+          <div class="pillrow" data-q="family_bundle_pain_points" data-multi="true">
+            <button type="button" class="pill">등본, 가족관계증명서 등 서류 제출 및 인증 절차가 너무 복잡하다</button>
+            <button type="button" class="pill">통신사 할인처럼 '온 가족이 모일수록 커지는 실질적 금융 혜택(우대금리, 수수료 면제 등)'이 부족하다.</button>
+            <button type="button" class="pill">가족 간의 경조사(부모님 환갑, 명절, 제사 등)나 집안 행사 비용을 모으고 관리하는 기능이 따로 없다.</button>
+            <button type="button" class="pill">매달 나가는 공과금, 생활비 현황이나 집안의 금융 일정을 온 가족이 함께 공유하기 어렵다.</button>
+            <button type="button" class="pill" data-exclusive>특별히 불편한 점이 없다</button>
+            <button type="button" class="pill" data-other>기타</button>
+          </div>
+          <input type="text" class="other-input" data-for="family_bundle_pain_points" placeholder="불편하거나 아쉬운 점을 입력해주세요" hidden>
+        </div>
+        <div class="qblock">
+          <label class="qlabel">4. 기존 은행의 모임통장(예: 카카오뱅크 등)을 이용해 보셨다면, 이용 중 가장 아쉬웠던 점은 무엇인가요?</label>
+          <div class="pillrow" data-q="group_account_pain_point">
+            <button type="button" class="pill">단순 입출금 내역만 보이고, '어디에 왜 썼는지' 상세 장부(메모, 카테고리) 작성이 불편하다.</button>
+            <button type="button" class="pill">모임원 전체가 영수증 첨부나 증빙 자료를 같이 올리고 공유하는 기능이 없다.</button>
+            <button type="button" class="pill">모임통장 명의자(총무) 중심이라 다른 모임원들의 권한이 제한적이다.</button>
+            <button type="button" class="pill">이용해 본 적 없다</button>
+            <button type="button" class="pill" data-other>기타</button>
+          </div>
+          <input type="text" class="other-input" data-for="group_account_pain_point" placeholder="아쉬웠던 점을 입력해주세요" hidden>
+        </div>
+        <div class="qblock">
+          <label class="qlabel">5. 소모임(동아리, 동호회)의 회비나 가족 크고 작은 행사(여행, 경조사)의 비용을 관리할 때 가장 스트레스 받는 상황은 무엇인가요? (중복 선택 가능)</label>
+          <div class="pillrow" data-q="cost_management_stress" data-multi="true">
+            <button type="button" class="pill">총무가 영수증을 일일이 첨부하고 엑셀/장부에 기록해야 하는 번거로움</button>
+            <button type="button" class="pill">다른 구성원들이 잔액이나 상세 지출 내역을 실시간으로 확인하기 어려워 투명성이 떨어짐</button>
+            <button type="button" class="pill">회비나 공동 비용 미납자가 누구인지 매번 확인하고 독촉해야 하는 부담감</button>
+            <button type="button" class="pill">모임 전용 카드가 없어 개인 카드로 결제한 뒤 정산하는 과정의 복잡함</button>
+            <button type="button" class="pill">너무 딱딱하다</button>
+            <button type="button" class="pill" data-exclusive>특별히 불편한 점이 없다</button>
+            <button type="button" class="pill" data-other>기타</button>
+          </div>
+          <input type="text" class="other-input" data-for="cost_management_stress" placeholder="스트레스 받는 상황을 입력해주세요" hidden>
         </div>
       </div>
 
       <div class="step" data-step="2" hidden>
-        <p class="stepno">STEP 3 / 6</p>
-        <h2>iM뱅크 이용 여부</h2>
+        <p class="stepno">SECTION 3 / 4</p>
+        <h2>재미있는 모임통장 수요</h2>
         <div class="qblock">
-          <label class="qlabel">현재 iM뱅크를 주거래 혹은 서브로 이용하고 계신가요?</label>
-          <div class="pillrow" data-q="uses_im">
-            <button type="button" class="pill" data-branch="3A">네, 이용하고 있어요</button>
-            <button type="button" class="pill" data-branch="3B">아니요, 이용하지 않아요</button>
+          <label class="qlabel">1. 귀하는 가족, 커플, 친구, 룸메이트, 소모임 등 나와 친밀한 사람들과 '돈을 함께 모으거나 묶여 있을 때' 어떤 느낌을 가장 크게 받으시나요?</label>
+          <div class="pillrow" data-q="shared_money_feeling">
+            <button type="button" class="pill">우리는 하나의 공동체라는 '소속감과 유대감'이 든다.</button>
+            <button type="button" class="pill">공동의 목표(여행, 부모님 선물 등)를 향해 달리는 '함께하는 재미'가 있다.</button>
+            <button type="button" class="pill">그냥 단순히 돈을 정산하는 '비즈니스적인 관계'로 느껴진다.</button>
+            <button type="button" class="pill">오히려 돈이 얽혀서 '불편하고 조심스러운 마음'이 든다.</button>
+            <button type="button" class="pill" data-other>기타</button>
+          </div>
+          <input type="text" class="other-input" data-for="shared_money_feeling" placeholder="느낌을 입력해주세요" hidden>
+        </div>
+        <div class="qblock">
+          <label class="qlabel">2. 현재 시중은행의 모임통장이나 결합 서비스를 이용할 때, 정서적으로 가장 아쉽거나 건조하다고 느낀 부분은 무엇인가요? (중복 선택 가능)</label>
+          <div class="pillrow" data-q="emotional_gaps" data-multi="true">
+            <button type="button" class="pill">입출금 숫자만 오갈 뿐, 모임원들과 소통하거나 감정을 나눌 공간이 없다</button>
+            <button type="button" class="pill">우리 가족/모임만의 개성이나 아이덴티티를 표현할 수 없다</button>
+            <button type="button" class="pill">돈을 모으는 과정이 지루하고, 목표 달성의 성취감이나 축하의 재미가 부족하다</button>
+            <button type="button" class="pill">법적 가족이 아닌 친구나 크루들과는 묶일 수 없어 소외감을 느낀다</button>
+            <button type="button" class="pill" data-exclusive>딱히 아쉬운 점이 없다</button>
+            <button type="button" class="pill" data-other>기타</button>
+          </div>
+          <input type="text" class="other-input" data-for="emotional_gaps" placeholder="아쉬운 점을 입력해주세요" hidden>
+        </div>
+        <div class="qblock">
+          <label class="qlabel">3. 돈을 모으고 쓰는 과정 자체가 하나의 '놀이'이자 '소통 창구'가 되는 커뮤니티형 금융 서비스가 출시된다면, 기존 은행 앱 대신 사용할 의향이 있으신가요?</label>
+          <div class="pillrow" data-q="community_finance_intent">
+            <button type="button" class="pill">매우 있다 (기존 앱에서 갈아탈 의향 있음)</button>
+            <button type="button" class="pill">있다 (재미 요소가 확실하다면 서브로 써볼 의향 있음)</button>
+            <button type="button" class="pill">보통이다</button>
+            <button type="button" class="pill">별로 없다 (금융은 그냥 진지하고 단순한 게 좋다)</button>
           </div>
         </div>
       </div>
 
-      <div class="step" data-step="3A" hidden>
-        <p class="stepno">STEP 4 / 6 · 이용자</p>
-        <h2>iM뱅크를 이용하는 이유</h2>
+      <div class="step" data-step="3" hidden>
+        <p class="stepno">SECTION 4 / 4</p>
+        <h2>인적사항</h2>
         <div class="qblock">
-          <label class="qlabel">iM뱅크를 이용(유지)하는 핵심 이유는?</label>
-          <div class="pillrow" data-q="a_motivation">
-            <button type="button" class="pill">오랜 신뢰 · 익숙함</button>
-            <button type="button" class="pill">급여 · 자동이체 연결</button>
-            <button type="button" class="pill">금리 · 혜택</button>
-            <button type="button" class="pill">지점 · 접근성</button>
-            <button type="button" class="pill">지역 소속감</button>
-            <button type="button" class="pill" data-other>기타</button>
-          </div>
-          <input type="text" class="other-input" data-for="a_motivation" placeholder="직접 입력" hidden>
+          <label class="qlabel" for="age-input">1. 나이</label>
+          <input id="age-input" type="number" class="text-input" data-q="age" min="10" max="100" inputmode="numeric" placeholder="만 나이를 입력해주세요">
         </div>
         <div class="qblock">
-          <label class="qlabel">iM뱅크 브랜드의 첫인상은? (복수응답 가능)</label>
-          <div class="pillrow" data-q="a_image" data-multi="true">
-            <button type="button" class="pill">친근한 지역 은행</button>
-            <button type="button" class="pill">오래되고 보수적</button>
-            <button type="button" class="pill">디지털 경쟁력 약함</button>
-            <button type="button" class="pill">지역사회와 함께함</button>
-            <button type="button" class="pill">특별한 인상 없음</button>
-            <button type="button" class="pill" data-other>기타</button>
+          <label class="qlabel">2. 성별</label>
+          <div class="pillrow" data-q="gender">
+            <button type="button" class="pill">여성</button><button type="button" class="pill">남성</button><button type="button" class="pill" data-other>기타</button><button type="button" class="pill">응답하고 싶지 않음</button>
           </div>
-          <input type="text" class="other-input" data-for="a_image" placeholder="직접 입력" hidden>
-        </div>
-        <div class="qblock">
-          <label class="qlabel">타 은행이 더 좋은 조건을 제안하면 갈아탈 의향이 있나요?</label>
-          <div class="pillrow likert" data-q="a_switch">
-            <button type="button" class="pill likert-dot size-1 pole-a">1</button>
-            <button type="button" class="pill likert-dot size-2 pole-a">2</button>
-            <button type="button" class="pill likert-dot size-3">3</button>
-            <button type="button" class="pill likert-dot size-2 pole-b">4</button>
-            <button type="button" class="pill likert-dot size-1 pole-b">5</button>
-          </div>
-          <div class="rng-labels"><span>바로 갈아탄다</span><span>절대 안 옮긴다</span></div>
-        </div>
-        <div class="qblock">
-          <label class="qlabel">iM뱅크가 지역사회 · 소상공인 · 청년에 기여한다고 느낀 적이 있나요? (복수응답 가능)</label>
-          <div class="pillrow" data-q="a_esg" data-multi="true">
-            <button type="button" class="pill">소상공인 지원 체감</button>
-            <button type="button" class="pill">청년 프로그램 체감</button>
-            <button type="button" class="pill">사회공헌 인지만 함</button>
-            <button type="button" class="pill">체감한 적 없음</button>
-          </div>
+          <input type="text" class="other-input" data-for="gender" placeholder="직접 입력" hidden>
         </div>
       </div>
-
-      <div class="step" data-step="3B" hidden>
-        <p class="stepno">STEP 4 / 6 · 비이용자</p>
-        <h2>iM뱅크를 이용하지 않는 이유</h2>
-        <div class="qblock">
-          <label class="qlabel">주거래로 고려하지 않거나 중단한 이유는?</label>
-          <div class="pillrow" data-q="b_reason">
-            <button type="button" class="pill">iM뱅크를 잘 모른다</button>
-            <button type="button" class="pill">혜택 · 금리 부족</button>
-            <button type="button" class="pill">지점 접근성 낮음</button>
-            <button type="button" class="pill">앱 경험 아쉬움</button>
-            <button type="button" class="pill">특별한 이유 없음</button>
-            <button type="button" class="pill" data-other>기타</button>
-          </div>
-          <input type="text" class="other-input" data-for="b_reason" placeholder="직접 입력" hidden>
-        </div>
-        <div class="qblock">
-          <label class="qlabel">타 은행 대비 가장 큰 아쉬움은? (복수 선택)</label>
-          <div class="pillrow" data-q="b_gap" data-multi="true">
-            <button type="button" class="pill">브랜드 신뢰도</button>
-            <button type="button" class="pill">앱 · 디지털 경험</button>
-            <button type="button" class="pill">지점 · 접근성</button>
-            <button type="button" class="pill">금리 · 혜택</button>
-            <button type="button" class="pill">iM뱅크를 잘 모른다</button>
-            <button type="button" class="pill" data-other>기타</button>
-          </div>
-          <input type="text" class="other-input" data-for="b_gap" placeholder="직접 입력" hidden>
-        </div>
-        <div class="qblock">
-          <label class="qlabel">어떤 모습이면 '맡겨도 되겠다'는 마음이 들까요?</label>
-          <div class="pillrow" data-q="b_trigger">
-            <button type="button" class="pill">파격적인 금리 · 캐시백</button>
-            <button type="button" class="pill">유학생 · 소상공인 등 특화 서비스</button>
-            <button type="button" class="pill">지역상생 활동 강화</button>
-            <button type="button" class="pill">앱 경험 개선</button>
-            <button type="button" class="pill">딱히 없음</button>
-            <button type="button" class="pill" data-other>기타</button>
-          </div>
-          <input type="text" class="other-input" data-for="b_trigger" placeholder="직접 입력" hidden>
-        </div>
-      </div>
-
-      <div class="step" data-step="4" hidden>
-        <p class="stepno">STEP 5 / 6</p>
-        <h2>금융 생활 속 페인포인트</h2>
-        <div class="qblock">
-          <label class="qlabel">'은행이 내 상황을 더 이해해줬으면' 싶었던 순간은? (복수선택 가능)</label>
-          <div class="pillrow" data-q="pain" data-multi="true">
-            <button type="button" class="pill">대출 · 신용 어려움</button>
-            <button type="button" class="pill">소비 패턴 이해 부족</button>
-            <button type="button" class="pill">저축 목표 설계 부재</button>
-            <button type="button" class="pill">비대면 상담 한계</button>
-          </div>
-          <textarea class="ta" data-q="pain_text" placeholder="구체적인 경험을 자유롭게 적어주세요 (선택)"></textarea>
-        </div>
-        <div class="qblock">
-          <label class="qlabel">'ESG 금융 정책'이 시행된다면 가장 먼저 떠오르는 것, 혹은 가장 바라는 내용은? (복수선택 가능)</label>
-          <div class="pillrow" data-q="esg_expect" data-multi="true">
-            <button type="button" class="pill">소상공인 정책자금 연결</button>
-            <button type="button" class="pill">청년 자산관리 · 교육</button>
-            <button type="button" class="pill">지역 일자리 · 창업 지원</button>
-            <button type="button" class="pill">금융취약계층 지원</button>
-          </div>
-          <textarea class="ta" data-q="esg_expect_text" placeholder="바라는 점을 자유롭게 적어주세요 (선택)"></textarea>
-        </div>
-      </div>
-
-      <div class="step" data-step="5" hidden>
-        <p class="stepno">STEP 6 / 6</p>
-        <h2>지역성에 대한 인식</h2>
-        <div class="qblock">
-          <label class="qlabel">iM뱅크는 나에게 어떤 은행에 더 가깝게 느껴지나요?</label>
-          <div class="pillrow likert" data-q="locality">
-            <button type="button" class="pill likert-dot size-1 pole-a">1</button>
-            <button type="button" class="pill likert-dot size-2 pole-a">2</button>
-            <button type="button" class="pill likert-dot size-3">3</button>
-            <button type="button" class="pill likert-dot size-2 pole-b">4</button>
-            <button type="button" class="pill likert-dot size-1 pole-b">5</button>
-          </div>
-          <div class="rng-labels"><span>친근하고 상생하는 은행</span><span>로컬에 갇힌 은행</span></div>
-        </div>
-      </div>
-
     </form>
 
     <p class="warn" id="warn-msg">아직 답하지 않은 문항이 있어요. 표시된 곳을 채워주세요.</p>
@@ -518,7 +486,7 @@
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
     </div>
     <h2>고맙습니다</h2>
-    <p>바쁘신 중에도 귀한 시간 내어주셔서 감사드려요. 여러분의 답변이 iM뱅크와 지역 시민을 잇는 서비스 설계의 첫 데이터가 됩니다.</p>
+    <p>바쁘신 중에도 귀한 시간 내어주셔서 감사드려요. 여러분의 답변은 함께하는 금융 생활에 실제 수요가 있는지 확인하고, 더 나은 서비스를 설계하는 데 활용됩니다.</p>
     <br>
     <a href="#" id="home-link" class="btn ghost">처음으로</a>
   </section>
@@ -527,9 +495,9 @@
 <script>
 (function(){
   // ⚠️ 아래 URL을 Google Apps Script 배포 후 받은 웹 앱 URL로 교체하세요.
-  const SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyRJD3SGF4c2_bIgROW4tREQvSNZA0S_evIIbD3BIua13qVQyCHeJO7XTlJpGETExCD/exec";
+  const SHEET_WEBHOOK_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
 
-  const order = ['0','1','2','3A','4','5'];
+  const order = ['0','1','2','3'];
   let idx = 0;
   const answers = {};
 
@@ -578,7 +546,7 @@
       const qname = group.getAttribute('data-q');
       const multi = group.getAttribute('data-multi') === 'true';
       const picked = Array.from(group.querySelectorAll('.pill[aria-pressed="true"]')).map(b => b.textContent.trim());
-      let value = multi ? picked.join(', ') : (picked[0] || '');
+      let value = multi ? picked : (picked[0] || '');
       const otherInput = document.querySelector('.other-input[data-for="'+qname+'"]');
       const otherText = otherInput && !otherInput.hidden ? otherInput.value.trim() : '';
       if(otherInput){
@@ -586,32 +554,22 @@
         data[qname + '_other'] = otherText;
       }
       if(otherText){
-        value += (value ? ' - ' : '') + otherText;
+        if(multi){
+          value = value.map(item => item === '기타' ? '기타 - ' + otherText : item);
+        }else{
+          value = (value ? value + ' - ' : '') + otherText;
+        }
       }
       data[qname] = value;
     });
-    document.querySelectorAll('input[type="range"]').forEach(r => {
-      data[r.getAttribute('data-q')] = r.value;
-    });
-    document.querySelectorAll('textarea[data-q]').forEach(t => {
-      data[t.getAttribute('data-q')] = t.value.trim();
+    document.querySelectorAll('input.text-input[data-q]').forEach(input => {
+      data[input.getAttribute('data-q')] = input.value.trim();
     });
 
-    // 자유서술 키가 추가되기 전에 배포된 Apps Script도 내용을 저장할 수 있게
-    // 해당 선택형 답변에도 함께 기록한다. 별도 *_text 키는 분석용으로 유지한다.
-    [
-      ['pain', 'pain_text'],
-      ['esg_expect', 'esg_expect_text']
-    ].forEach(([choiceKey, textKey]) => {
-      const freeText = data[textKey];
-      if(freeText){
-        data[choiceKey] += (data[choiceKey] ? ' / 주관식: ' : '주관식: ') + freeText;
-      }
-    });
-
-    data.branch = order[3] === '3A' ? '이용자' : '비이용자';
-    data.timestamp = new Date().toISOString();
-    data.schema_version = 2;
+    const now = new Date();
+    const kst = new Date(now.getTime() + (9 * 60 * 60 * 1000));
+    data.timestamp = kst.toISOString().slice(0, 19) + '+09:00';
+    data.schema_version = 3;
     return data;
   }
 
@@ -641,11 +599,22 @@
   function isAnswered(qEl){
     const qname = qEl.getAttribute('data-q');
     if(qEl.classList.contains('pillrow')){
-      if(qEl.querySelector('.pill[aria-pressed="true"]') !== null) return true;
+      const picked = qEl.querySelector('.pill[aria-pressed="true"]');
+      if(picked !== null){
+        const other = qEl.querySelector('.pill[data-other][aria-pressed="true"]');
+        if(other){
+          const otherInput = document.querySelector('.other-input[data-for="'+qname+'"]');
+          return !!(otherInput && otherInput.value.trim());
+        }
+        return true;
+      }
       const sibling = qEl.parentElement.querySelector('textarea[data-q="'+qname+'_text"]');
       return !!(sibling && sibling.value.trim());
     }
-    return true; // ranges always have a default value
+    if(qEl.matches('input.text-input')){
+      return qEl.value.trim() !== '' && qEl.checkValidity();
+    }
+    return true;
   }
 
   function renderStep(){
@@ -664,6 +633,7 @@
     const qs = requiredQuestionsInStep(el);
     const unanswered = qs.filter(q => !isAnswered(q));
     if(unanswered.length){
+      document.getElementById('warn-msg').textContent = '아직 답하지 않은 문항이 있어요. 표시된 곳을 채워주세요.';
       document.getElementById('warn-msg').style.display = 'block';
       unanswered[0].scrollIntoView({behavior:'smooth', block:'center'});
       return;
@@ -689,6 +659,7 @@
 
   document.querySelectorAll('.pillrow').forEach(group => {
     const multi = group.getAttribute('data-multi') === 'true';
+    const max = Number(group.getAttribute('data-max') || 0);
     const qname = group.getAttribute('data-q');
     answers[qname] = multi ? [] : null;
 
@@ -696,18 +667,29 @@
       btn.setAttribute('aria-pressed', 'false');
       btn.addEventListener('click', () => {
         const pressed = btn.getAttribute('aria-pressed') === 'true';
+        if(multi && !pressed && max){
+          const selectedCount = group.querySelectorAll('.pill[aria-pressed="true"]').length;
+          if(selectedCount >= max){
+            const warn = document.getElementById('warn-msg');
+            warn.textContent = '이 문항은 최대 ' + max + '개까지 선택할 수 있어요.';
+            warn.style.display = 'block';
+            group.scrollIntoView({behavior:'smooth', block:'center'});
+            return;
+          }
+        }
         if(!multi){
           group.querySelectorAll('.pill').forEach(b => b.setAttribute('aria-pressed','false'));
+        }else if(!pressed && btn.hasAttribute('data-exclusive')){
+          group.querySelectorAll('.pill').forEach(b => b.setAttribute('aria-pressed','false'));
+        }else if(!pressed){
+          group.querySelectorAll('.pill[data-exclusive]').forEach(b => b.setAttribute('aria-pressed','false'));
         }
         btn.setAttribute('aria-pressed', (!pressed).toString());
 
-        if(btn.hasAttribute('data-branch') && !pressed){
-          order[3] = btn.getAttribute('data-branch');
-        }
-        if(btn.hasAttribute('data-other')){
-          const otherInput = document.querySelector('.other-input[data-for="'+qname+'"]');
-          if(otherInput) otherInput.hidden = pressed;
-        }
+        const otherButton = group.querySelector('.pill[data-other]');
+        const otherInput = document.querySelector('.other-input[data-for="'+qname+'"]');
+        if(otherInput) otherInput.hidden = !otherButton || otherButton.getAttribute('aria-pressed') !== 'true';
+        document.getElementById('warn-msg').style.display = 'none';
       });
     });
   });
