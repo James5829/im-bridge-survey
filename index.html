@@ -237,7 +237,7 @@
 <main id="view-landing" class="view active">
   <section class="hero">
     <span class="eyebrow">iM:Possible Challenger · 지속가능한 부다팀</span>
-    <h1>함께하는 금융, <em>정말 필요할까요?</em></h1>
+    <h1><em>모임통장</em>, 재밌으면 안되나요?</h1>
     <p class="lede">가족부터 친구, 룸메이트, 커플, 크루까지. 함께 돈을 관리하고 일상을 나누는 새로운 금융 서비스의 실제 수요를 알아봅니다.</p>
 
     <svg class="bridge-svg" viewBox="0 0 520 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="사람과 은행을 잇는 다리 모양 일러스트">
@@ -316,12 +316,12 @@
         <div class="qblock">
           <label class="qlabel">1. 평소 가족, 친구, 룸메이트, 동아리, 소모임 등과 함께 금융 생활(자산 공동 관리, 비용 각출, 회비 모으기 등)을 하고 계시나요? (중복 선택 가능)</label>
           <div class="pillrow" data-q="shared_finance_relationships" data-multi="true">
-            <button type="button" class="pill">실제 가족 / 친척 (부모, 자녀, 배우자, 형제자매 등)</button>
-            <button type="button" class="pill">커플 (데이트 비용 공동 관리)</button>
-            <button type="button" class="pill">룸메이트 / 하우스메이트 (주거비, 공과금 분담)</button>
-            <button type="button" class="pill">친구들과의 정기 모임 (계모임, 여행 등)</button>
-            <button type="button" class="pill">크루 (소모임, 동아리, 커뮤니티 등)</button>
-            <button type="button" class="pill" data-exclusive>현재는 함께 돈을 모으거나 묶여 있는 관계가 없다</button>
+            <button type="button" class="pill">실제 가족 / 친척</button>
+            <button type="button" class="pill">커플</button>
+            <button type="button" class="pill">룸메이트</button>
+            <button type="button" class="pill">친구들과의 정기 모임</button>
+            <button type="button" class="pill">동아리, 소모임</button>
+            <button type="button" class="pill" data-exclusive>없음</button>
             <button type="button" class="pill" data-other>기타</button>
           </div>
           <input type="text" class="other-input" data-for="shared_finance_relationships" placeholder="기타 관계를 입력해주세요" hidden>
@@ -329,10 +329,9 @@
         <div class="qblock">
           <label class="qlabel">2. 현재 공동 돈 관리를 위해 주로 사용하는 방법은 무엇인가요?</label>
           <div class="pillrow" data-q="shared_money_method">
-            <button type="button" class="pill">특정 은행의 모임통장 서비스 (예: 카카오뱅크, 토스뱅크 등)</button>
-            <button type="button" class="pill">총무 한 명의 개인 계좌로 송금</button>
-            <button type="button" class="pill">수기 장부나 엑셀, 노션(Notion) 등으로 기록 관리</button>
-            <button type="button" class="pill">공동 카드 발급</button>
+            <button type="button" class="pill">모임통장</button>
+            <button type="button" class="pill">총무 개인 계좌</button>
+            <button type="button" class="pill">수기 장부나 엑셀, 노션</button>
             <button type="button" class="pill" data-other>기타</button>
           </div>
           <input type="text" class="other-input" data-for="shared_money_method" placeholder="사용 중인 방법을 입력해주세요" hidden>
@@ -340,12 +339,10 @@
         <div class="qblock">
           <label class="qlabel">3. 왜 그러한 방법을 사용하시나요?</label>
           <div class="pillrow" data-q="shared_money_method_reason">
-            <button type="button" class="pill">돈이 오고 가는 내역과 잔액을 실시간으로 모두가 확인할 수 있어서 (투명성)</button>
-            <button type="button" class="pill">매달 나가는 고정비나 회비 정산 과정이 가장 간편해서 (편리성)</button>
-            <button type="button" class="pill">서비스의 화면(UI)이 직관적이고 사용하기 편해서 (사용성)</button>
-            <button type="button" class="pill">우리 모임만의 소속감이나 함께 모으는 재미를 느낄 수 있어서</button>
-            <button type="button" class="pill">돈 얘기 외에도 멤버들과 소소하게 소통하거나 리액션하기 좋아서</button>
-            <button type="button" class="pill">모임원(또는 가족) 중 누군가가 초대해서 자연스럽게 쓰게 되었다 (지인 추천)</button>
+            <button type="button" class="pill">실시간으로 확인할 수 있어서</button>
+            <button type="button" class="pill">정산 과정이 간편해서</button>
+            <button type="button" class="pill">사용하기 편해서</button>
+            <button type="button" class="pill">소속감이나 재미를 느낄 수 있어서</button>
             <button type="button" class="pill">다른 대안을 잘 모르거나, 기존에 쓰던 방식이 익숙하고 무난해서</button>
             <button type="button" class="pill" data-other>기타</button>
           </div>
@@ -357,21 +354,21 @@
         <p class="stepno">SECTION 2 / 4</p>
         <h2><span class="mono">iM family</span> 유연한 결합 및 일상 관리</h2>
         <div class="qblock">
-          <label class="qlabel">1. 가족, 룸메이트, 커플, 친한 친구, 여행 크루 등과 '금융 혜택이나 일정을 결합'하고 싶다고 느낀 적이 있으신가요?</label>
+          <label class="qlabel">1. 지인과 금융 혜택이나 일정을 묶고 싶나요?</label>
           <div class="pillrow" data-q="bundle_desire_frequency">
-            <button type="button" class="pill">매우 자주 느낀다</button><button type="button" class="pill">가끔 느낀다</button><button type="button" class="pill">별로 느낀 적 없다</button><button type="button" class="pill">전혀 없다</button>
+            <button type="button" class="pill">매우 그렇다</button><button type="button" class="pill">그렇다</button><button type="button" class="pill">아니다</button><button type="button" class="pill">전혀 아니다</button>
           </div>
         </div>
         <div class="qblock">
-          <label class="qlabel">2. 만약 가족, 룸메이트, 친구, 커플 등 간의 결합 서비스가 있다면, 가장 필요하다고 생각하는 기능은 무엇인가요? (최대 2개 선택)</label>
+          <label class="qlabel">2. 결합 서비스에 필요한 기능은 무엇인가요? (최대 2개)</label>
           <div class="pillrow" data-q="desired_bundle_features" data-multi="true" data-max="2">
-            <button type="button" class="pill">통신사 결합 할인처럼, 결합 인원이 많아질수록 우대금리나 수수료 혜택 제공</button>
-            <button type="button" class="pill">집안일 분담, 공과금 납부일, 함께 가는 여행 등 공동 일정 관리(캘린더) 기능</button>
-            <button type="button" class="pill">경조사(결혼, 부고, 생일 등)나 특별한 날을 위한 공동 펀딩 및 정산 기능</button>
-            <button type="button" class="pill">매달 고정적으로 나가는 생활비(월세, 관리비 등) 자동 이체 및 현황 공유</button>
-            <button type="button" class="pill">서류 증빙 없이 카카오톡 등으로 링크만 공유하면 즉시 그룹 결합 및 해제 가능</button>
-            <button type="button" class="pill">부모님 용돈 드리기 자동화</button>
-            <button type="button" class="pill">온 가족 자산 현황판</button>
+            <button type="button" class="pill">인원별 금융 혜택</button>
+            <button type="button" class="pill">공동 일정 관리</button>
+            <button type="button" class="pill">공동 펀딩·정산</button>
+            <button type="button" class="pill">생활비 자동이체·공유</button>
+            <button type="button" class="pill">링크로 간편 결합</button>
+            <button type="button" class="pill">부모님 용돈 자동이체</button>
+            <button type="button" class="pill">가족 자산 현황판</button>
             <button type="button" class="pill">룸메이트 정산 알림</button>
             <button type="button" class="pill" data-other>기타</button>
           </div>
@@ -379,37 +376,37 @@
           <input type="text" class="other-input" data-for="desired_bundle_features" placeholder="필요한 기능을 입력해주세요" hidden>
         </div>
         <div class="qblock">
-          <label class="qlabel">3. 기존 은행의 '가족 결합 서비스'를 이용하거나 신청할 때, 가장 불편했거나 아쉬웠던 점은 무엇인가요? (가족 결합 경험자 또는 희망자 기준 / 중복 선택 가능)</label>
+          <label class="qlabel">3. 가족 결합 서비스에서 불편한 점은 무엇인가요? (중복 선택)</label>
           <div class="pillrow" data-q="family_bundle_pain_points" data-multi="true">
-            <button type="button" class="pill">등본, 가족관계증명서 등 서류 제출 및 인증 절차가 너무 복잡하다</button>
-            <button type="button" class="pill">통신사 할인처럼 '온 가족이 모일수록 커지는 실질적 금융 혜택(우대금리, 수수료 면제 등)'이 부족하다.</button>
-            <button type="button" class="pill">가족 간의 경조사(부모님 환갑, 명절, 제사 등)나 집안 행사 비용을 모으고 관리하는 기능이 따로 없다.</button>
-            <button type="button" class="pill">매달 나가는 공과금, 생활비 현황이나 집안의 금융 일정을 온 가족이 함께 공유하기 어렵다.</button>
-            <button type="button" class="pill" data-exclusive>특별히 불편한 점이 없다</button>
+            <button type="button" class="pill">복잡한 서류·인증</button>
+            <button type="button" class="pill">부족한 금융 혜택</button>
+            <button type="button" class="pill">행사비 관리 기능 부족</button>
+            <button type="button" class="pill">생활비·일정 공유 어려움</button>
+            <button type="button" class="pill" data-exclusive>불편 없음</button>
             <button type="button" class="pill" data-other>기타</button>
           </div>
           <input type="text" class="other-input" data-for="family_bundle_pain_points" placeholder="불편하거나 아쉬운 점을 입력해주세요" hidden>
         </div>
         <div class="qblock">
-          <label class="qlabel">4. 기존 은행의 모임통장(예: 카카오뱅크 등)을 이용해 보셨다면, 이용 중 가장 아쉬웠던 점은 무엇인가요?</label>
+          <label class="qlabel">4. 모임통장에서 가장 아쉬운 점은 무엇인가요?</label>
           <div class="pillrow" data-q="group_account_pain_point">
-            <button type="button" class="pill">단순 입출금 내역만 보이고, '어디에 왜 썼는지' 상세 장부(메모, 카테고리) 작성이 불편하다.</button>
-            <button type="button" class="pill">모임원 전체가 영수증 첨부나 증빙 자료를 같이 올리고 공유하는 기능이 없다.</button>
-            <button type="button" class="pill">모임통장 명의자(총무) 중심이라 다른 모임원들의 권한이 제한적이다.</button>
-            <button type="button" class="pill">이용해 본 적 없다</button>
+            <button type="button" class="pill">상세 장부 작성 불편</button>
+            <button type="button" class="pill">영수증 공유 불가</button>
+            <button type="button" class="pill">모임원 권한 부족</button>
+            <button type="button" class="pill">이용 경험 없음</button>
             <button type="button" class="pill" data-other>기타</button>
           </div>
           <input type="text" class="other-input" data-for="group_account_pain_point" placeholder="아쉬웠던 점을 입력해주세요" hidden>
         </div>
         <div class="qblock">
-          <label class="qlabel">5. 소모임(동아리, 동호회)의 회비나 가족 크고 작은 행사(여행, 경조사)의 비용을 관리할 때 가장 스트레스 받는 상황은 무엇인가요? (중복 선택 가능)</label>
+          <label class="qlabel">5. 공동 비용 관리에서 힘든 점은 무엇인가요? (중복 선택)</label>
           <div class="pillrow" data-q="cost_management_stress" data-multi="true">
-            <button type="button" class="pill">총무가 영수증을 일일이 첨부하고 엑셀/장부에 기록해야 하는 번거로움</button>
-            <button type="button" class="pill">다른 구성원들이 잔액이나 상세 지출 내역을 실시간으로 확인하기 어려워 투명성이 떨어짐</button>
-            <button type="button" class="pill">회비나 공동 비용 미납자가 누구인지 매번 확인하고 독촉해야 하는 부담감</button>
-            <button type="button" class="pill">모임 전용 카드가 없어 개인 카드로 결제한 뒤 정산하는 과정의 복잡함</button>
-            <button type="button" class="pill">너무 딱딱하다</button>
-            <button type="button" class="pill" data-exclusive>특별히 불편한 점이 없다</button>
+            <button type="button" class="pill">영수증·장부 기록</button>
+            <button type="button" class="pill">지출 내역 확인</button>
+            <button type="button" class="pill">미납 확인·독촉</button>
+            <button type="button" class="pill">개인 결제 후 정산</button>
+            <button type="button" class="pill">딱딱한 사용 경험</button>
+            <button type="button" class="pill" data-exclusive>불편 없음</button>
             <button type="button" class="pill" data-other>기타</button>
           </div>
           <input type="text" class="other-input" data-for="cost_management_stress" placeholder="스트레스 받는 상황을 입력해주세요" hidden>
@@ -420,35 +417,35 @@
         <p class="stepno">SECTION 3 / 4</p>
         <h2>재미있는 모임통장 수요</h2>
         <div class="qblock">
-          <label class="qlabel">1. 귀하는 가족, 커플, 친구, 룸메이트, 소모임 등 나와 친밀한 사람들과 '돈을 함께 모으거나 묶여 있을 때' 어떤 느낌을 가장 크게 받으시나요?</label>
+          <label class="qlabel">1. 가까운 사람과 돈을 모을 때 어떤 느낌인가요?</label>
           <div class="pillrow" data-q="shared_money_feeling">
-            <button type="button" class="pill">우리는 하나의 공동체라는 '소속감과 유대감'이 든다.</button>
-            <button type="button" class="pill">공동의 목표(여행, 부모님 선물 등)를 향해 달리는 '함께하는 재미'가 있다.</button>
-            <button type="button" class="pill">그냥 단순히 돈을 정산하는 '비즈니스적인 관계'로 느껴진다.</button>
-            <button type="button" class="pill">오히려 돈이 얽혀서 '불편하고 조심스러운 마음'이 든다.</button>
+            <button type="button" class="pill">소속감·유대감</button>
+            <button type="button" class="pill">함께하는 재미</button>
+            <button type="button" class="pill">단순한 정산 관계</button>
+            <button type="button" class="pill">불편함·조심스러움</button>
             <button type="button" class="pill" data-other>기타</button>
           </div>
           <input type="text" class="other-input" data-for="shared_money_feeling" placeholder="느낌을 입력해주세요" hidden>
         </div>
         <div class="qblock">
-          <label class="qlabel">2. 현재 시중은행의 모임통장이나 결합 서비스를 이용할 때, 정서적으로 가장 아쉽거나 건조하다고 느낀 부분은 무엇인가요? (중복 선택 가능)</label>
+          <label class="qlabel">2. 기존 모임통장의 정서적 아쉬움은 무엇인가요? (중복 선택)</label>
           <div class="pillrow" data-q="emotional_gaps" data-multi="true">
-            <button type="button" class="pill">입출금 숫자만 오갈 뿐, 모임원들과 소통하거나 감정을 나눌 공간이 없다</button>
-            <button type="button" class="pill">우리 가족/모임만의 개성이나 아이덴티티를 표현할 수 없다</button>
-            <button type="button" class="pill">돈을 모으는 과정이 지루하고, 목표 달성의 성취감이나 축하의 재미가 부족하다</button>
-            <button type="button" class="pill">법적 가족이 아닌 친구나 크루들과는 묶일 수 없어 소외감을 느낀다</button>
-            <button type="button" class="pill" data-exclusive>딱히 아쉬운 점이 없다</button>
+            <button type="button" class="pill">소통 공간 부족</button>
+            <button type="button" class="pill">모임 개성 표현 부족</button>
+            <button type="button" class="pill">성취감·재미 부족</button>
+            <button type="button" class="pill">친구·크루 결합 제한</button>
+            <button type="button" class="pill" data-exclusive>아쉬움 없음</button>
             <button type="button" class="pill" data-other>기타</button>
           </div>
           <input type="text" class="other-input" data-for="emotional_gaps" placeholder="아쉬운 점을 입력해주세요" hidden>
         </div>
         <div class="qblock">
-          <label class="qlabel">3. 돈을 모으고 쓰는 과정 자체가 하나의 '놀이'이자 '소통 창구'가 되는 커뮤니티형 금융 서비스가 출시된다면, 기존 은행 앱 대신 사용할 의향이 있으신가요?</label>
+          <label class="qlabel">3. 커뮤니티형 금융 서비스를 사용할 의향이 있나요?</label>
           <div class="pillrow" data-q="community_finance_intent">
-            <button type="button" class="pill">매우 있다 (기존 앱에서 갈아탈 의향 있음)</button>
-            <button type="button" class="pill">있다 (재미 요소가 확실하다면 서브로 써볼 의향 있음)</button>
+            <button type="button" class="pill">매우 있다</button>
+            <button type="button" class="pill">있다</button>
             <button type="button" class="pill">보통이다</button>
-            <button type="button" class="pill">별로 없다 (금융은 그냥 진지하고 단순한 게 좋다)</button>
+            <button type="button" class="pill">없다</button>
           </div>
         </div>
       </div>
@@ -457,7 +454,7 @@
         <p class="stepno">SECTION 4 / 4</p>
         <h2>인적사항</h2>
         <div class="qblock">
-          <label class="qlabel">1. 나이</label>
+          <label class="qlabel">1. 연령대는 어떻게 되나요?</label>
           <div class="pillrow" data-q="age">
             <button type="button" class="pill">10대</button>
             <button type="button" class="pill">20대</button>
@@ -468,7 +465,7 @@
           </div>
         </div>
         <div class="qblock">
-          <label class="qlabel">2. 성별</label>
+          <label class="qlabel">2. 성별은 무엇인가요?</label>
           <div class="pillrow" data-q="gender">
             <button type="button" class="pill">여성</button><button type="button" class="pill">남성</button><button type="button" class="pill" data-other>기타</button><button type="button" class="pill">응답하고 싶지 않음</button>
           </div>
