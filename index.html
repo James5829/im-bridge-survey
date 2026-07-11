@@ -59,7 +59,7 @@
 
   /* ---------- landing ---------- */
   .hero{
-    max-width:760px; margin:0 auto; padding:64px 24px 40px;
+    max-width:760px; margin:0 auto; padding:64px 24px 40px; text-align:center;
   }
   .eyebrow{
     display:inline-flex; align-items:center; gap:8px;
@@ -76,10 +76,10 @@
     font-style:normal; color:var(--accent);
   }
   .hero p.lede{
-    font-size:17px; color:var(--ink-soft); max-width:44ch; margin:20px 0 36px;
+    font-size:17px; color:var(--ink-soft); max-width:44ch; margin:20px auto 36px;
   }
 
-  .bridge-svg{ width:100%; max-width:520px; height:auto; margin:8px 0 40px; display:block; }
+  .bridge-svg{ width:100%; max-width:520px; height:auto; margin:8px auto 40px; display:block; }
 
   .btn{
     appearance:none; border:none; cursor:pointer;
@@ -97,7 +97,7 @@
   .btn[disabled]{ opacity:0.35; cursor:not-allowed; }
 
   .meta-row{
-    display:flex; gap:24px; margin-top:28px; flex-wrap:wrap;
+    display:flex; justify-content:center; gap:24px; margin-top:28px; flex-wrap:wrap;
   }
   .meta-item{ font-size:13px; color:var(--ink-faint); }
   .meta-item .mono{ color:var(--ink); font-weight:500; }
@@ -108,6 +108,8 @@
     border-top:1px solid var(--line);
   }
   .section h2{ font-size:24px; }
+  .section > .kicker, .section > h2, .section > p{ text-align:center; }
+  .section > p{ margin-left:auto; margin-right:auto; }
   .section .kicker{
     font-size:13px; text-transform:none; color:var(--teal); font-weight:600;
     margin-bottom:8px;
@@ -241,15 +243,15 @@
     <p class="lede">가족부터 친구, 룸메이트, 커플, 크루까지. 함께 돈을 관리하고 일상을 나누는 새로운 금융 서비스의 실제 수요를 알아봅니다.</p>
 
     <svg class="bridge-svg" viewBox="0 0 520 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="사람과 은행을 잇는 다리 모양 일러스트">
-      <line x1="40" y1="120" x2="480" y2="120" stroke="#DEE6E3" stroke-width="2"/>
-      <path id="bridge-connection" stroke="#00C7A9" stroke-width="3" fill="none"/>
+      <path id="bridge-baseline" stroke="#DEE6E3" stroke-width="2" fill="none" vector-effect="non-scaling-stroke"/>
+      <path id="bridge-connection" stroke="#00C7A9" stroke-width="3" fill="none" vector-effect="non-scaling-stroke"/>
       <g id="person-node">
-        <circle cx="90" cy="96" r="14" fill="#16221F"/>
+        <circle id="person-head" cx="90" cy="96" r="14" fill="#16221F"/>
         <rect id="person-anchor" x="75" y="112" width="30" height="30" rx="8" fill="#16221F"/>
       </g>
       <g id="bank-node" transform="translate(400,78)">
-        <polygon points="35,0 70,22 0,22" fill="#0B6E5B"/>
-        <rect x="4" y="26" width="7" height="28" fill="#0B6E5B"/>
+        <polygon id="bank-roof" points="35,0 70,22 0,22" fill="#0B6E5B"/>
+        <rect id="bank-left-column" x="4" y="26" width="7" height="28" fill="#0B6E5B"/>
         <rect x="18" y="26" width="7" height="28" fill="#0B6E5B"/>
         <rect x="32" y="26" width="7" height="28" fill="#0B6E5B"/>
         <rect x="46" y="26" width="7" height="28" fill="#0B6E5B"/>
@@ -509,23 +511,43 @@
   const surveyView = document.getElementById('view-survey');
   const thanksView = document.getElementById('view-thanks');
 
-  function nodeCenter(node){
+  function nodeCenterInSvg(node, svg){
     const box = node.getBBox();
-    const point = new DOMPoint(box.x + box.width / 2, box.y + box.height / 2);
-    return point.matrixTransform(node.getCTM());
+    const nodeMatrix = node.getCTM();
+    const svgMatrix = svg.getCTM();
+    if (!nodeMatrix || !svgMatrix) return null;
+
+    const toSvgSpace = svgMatrix.inverse().multiply(nodeMatrix);
+    return new DOMPoint(
+      box.x + box.width / 2,
+      box.y + box.height / 2
+    ).matrixTransform(toSvgSpace);
   }
 
   function connectBridgeNodes(){
-    const person = nodeCenter(document.getElementById('person-anchor'));
-    const bank = nodeCenter(document.getElementById('bank-node'));
-    const lift = Math.abs(bank.x - person.x) * 0.18;
+    const svg = document.querySelector('.bridge-svg');
+    const personHead = nodeCenterInSvg(document.getElementById('person-head'), svg);
+    const personBody = nodeCenterInSvg(document.getElementById('person-anchor'), svg);
+    const bankRoof = nodeCenterInSvg(document.getElementById('bank-roof'), svg);
+    const bankColumn = nodeCenterInSvg(document.getElementById('bank-left-column'), svg);
+    if (!personHead || !personBody || !bankRoof || !bankColumn) return;
+
+    const baselineY = (personBody.y + bankColumn.y) / 2;
+    document.getElementById('bridge-baseline').setAttribute(
+      'd',
+      `M ${personBody.x} ${baselineY} H ${bankColumn.x}`
+    );
+
+    const distance = bankRoof.x - personHead.x;
+    const lift = Math.abs(distance) * 0.18;
     document.getElementById('bridge-connection').setAttribute(
       'd',
-      `M ${person.x} ${person.y} C ${person.x} ${person.y - lift}, ${bank.x} ${bank.y - lift}, ${bank.x} ${bank.y}`
+      `M ${personHead.x} ${personHead.y} C ${personHead.x + distance * 0.28} ${personHead.y - lift}, ${bankRoof.x - distance * 0.28} ${bankRoof.y - lift}, ${bankRoof.x} ${bankRoof.y}`
     );
   }
 
   connectBridgeNodes();
+  new ResizeObserver(connectBridgeNodes).observe(document.querySelector('.bridge-svg'));
 
   function showView(v){
     [landing, surveyView, thanksView].forEach(el => el.classList.remove('active'));
