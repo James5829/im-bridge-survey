@@ -457,8 +457,15 @@
         <p class="stepno">SECTION 4 / 4</p>
         <h2>인적사항</h2>
         <div class="qblock">
-          <label class="qlabel" for="age-input">1. 나이</label>
-          <input id="age-input" type="number" class="text-input" data-q="age" min="10" max="100" inputmode="numeric" placeholder="만 나이를 입력해주세요">
+          <label class="qlabel">1. 나이</label>
+          <div class="pillrow" data-q="age">
+            <button type="button" class="pill">10대</button>
+            <button type="button" class="pill">20대</button>
+            <button type="button" class="pill">30대</button>
+            <button type="button" class="pill">40대</button>
+            <button type="button" class="pill">50대</button>
+            <button type="button" class="pill">60대 이상</button>
+          </div>
         </div>
         <div class="qblock">
           <label class="qlabel">2. 성별</label>
@@ -495,7 +502,7 @@
 <script>
 (function(){
   // ⚠️ 아래 URL을 Google Apps Script 배포 후 받은 웹 앱 URL로 교체하세요.
-  const SHEET_WEBHOOK_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+  const SHEET_WEBHOOK_URL = "https://script.google.com/a/macros/g.skku.edu/s/AKfycbxFT5XtYi0L_WpGRhGmHNQ8-l4x7vJv_-sUzMPtmGmgXvloyphHXhOzWGUZf3WHQ-P1/exec";
 
   const order = ['0','1','2','3'];
   let idx = 0;

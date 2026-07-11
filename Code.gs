@@ -1,3 +1,4 @@
+const SURVEY_SPREADSHEET_ID = '1yyW3rq428eQQtd-fhcZ4ewwBnWMMicJe9Zp05SVWLvk';
 const SURVEY_SHEET_NAME = '공동금융_응답_v3';
 
 const SURVEY_COLUMNS = [
@@ -63,10 +64,7 @@ function setupSurveySheet() {
 }
 
 function getSurveySheet_() {
-  const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  if (!spreadsheet) {
-    throw new Error('이 Apps Script를 응답을 저장할 Google Sheet에 연결해 주세요.');
-  }
+  const spreadsheet = SpreadsheetApp.openById(SURVEY_SPREADSHEET_ID);
 
   let sheet = spreadsheet.getSheetByName(SURVEY_SHEET_NAME);
   if (!sheet) sheet = spreadsheet.insertSheet(SURVEY_SHEET_NAME);

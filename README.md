@@ -41,9 +41,9 @@ vercel
 
 ## Google Sheets 응답 저장 연결
 
-1. 응답을 저장할 Google Sheet를 열고 **확장 프로그램 → Apps Script**로 이동합니다.
+1. [응답을 저장할 Google Sheet](https://docs.google.com/spreadsheets/d/1yyW3rq428eQQtd-fhcZ4ewwBnWMMicJe9Zp05SVWLvk/edit)를 열고 **확장 프로그램 → Apps Script**로 이동합니다.
 2. `Code.gs` 내용을 Apps Script 편집기의 `Code.gs`에 붙여넣습니다.
-3. `setupSurveySheet` 함수를 한 번 실행하고 권한을 승인합니다. `공동금융_응답_v3` 시트와 헤더가 자동 생성됩니다.
+3. `setupSurveySheet` 함수를 한 번 실행하고 권한을 승인합니다. 코드에 연결된 위 스프레드시트에 `공동금융_응답_v3` 시트와 헤더가 자동 생성됩니다.
 4. **배포 → 새 배포 → 웹 앱**을 선택합니다.
    - 실행 사용자: 나
    - 액세스 권한: 모든 사용자
